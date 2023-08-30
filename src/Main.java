@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -10,7 +9,7 @@ public class Main {
 
     public static void agregarUsuario() {
         Scanner scanner = new Scanner(System.in);
-        List<Object> usuarios = new ArrayList<>();
+        List<Usuario> usuarios = new ArrayList<>();
         boolean repetir = true;
         do {
             System.out.println("Ingrese su nombre de usuario");
