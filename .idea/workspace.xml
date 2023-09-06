@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9fe089e-bf8e-4721-a6a9-487aa4f208a1" name="Changes" comment="" />
+    <list default="true" id="c9fe089e-bf8e-4721-a6a9-487aa4f208a1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Clases/Articulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Clases/Edicion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Clases/Revista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Clases/Suscriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "clase9",
     "last_opened_file_path": "C:/Users/usuario/Desktop/PracticaPOO",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
