@@ -12,11 +12,14 @@ public class Dueño {
     private int telefono;
     private List<Mascota> mascotas;
 
+    private List<Veterinario> veterinarios;
+
     public Dueño(String nombre, String direccion, int telefono) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
         this.mascotas = new ArrayList<Mascota>();
+        this.veterinarios = new ArrayList<Veterinario>();
     }
 
     public String getNombre() {
@@ -35,6 +38,8 @@ public class Dueño {
         return mascotas;
     }
 
+    public List<Veterinario> getVeterinarios() {return veterinarios;};
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -50,6 +55,7 @@ public class Dueño {
     public void setMascotas(List<Mascota> mascotas) {
         this.mascotas = mascotas;
     }
+    public void setVeterinarios(List<Veterinario> veterinarios) {this.veterinarios = veterinarios;};
 
     @Override
     public String toString() {
