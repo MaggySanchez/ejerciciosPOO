@@ -2,7 +2,7 @@ package Clases;
 
 import Interfaces.Ponedor;
 
-public abstract class Ave extends Oviparo implements Ponedor {
+public abstract class Ave extends Oviparo {
     public Ave(String nombre, int edad) {
         super(nombre, edad);
     }
