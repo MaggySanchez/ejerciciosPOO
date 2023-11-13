@@ -82,10 +82,14 @@ public class Cliente {
         return nombreCompleto;
     }
 
-    public void nombreYPrecioProductos() {
+    public ArrayList<String> nombreYPrecioProductos() {
+        ArrayList <String> nombresYPrecios = null;
         for (Producto producto: productos) {
-            System.out.println(producto.getNombre()+": "+producto.getPrecio());
+            String nombreyPrecio = producto.getNombre()+": "+producto.getPrecio();
+            nombresYPrecios.add(nombreyPrecio);
+            System.out.println(nombreyPrecio);
         }
+        return nombresYPrecios;
     }
 
     public void ingresarProducto() throws ExeptionInvalidProduct, ExeptionMaximunSize {
