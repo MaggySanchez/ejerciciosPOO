@@ -5,6 +5,7 @@ import Exeptions.ExeptionMaximunSize;
 import Factory.ProductoFactory;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Cliente {
     private String nombre;
@@ -13,11 +14,10 @@ public class Cliente {
     private Integer edad;
     private ArrayList<Producto> productos;
 
-    public Cliente(String nombre, String apellido, String mail, Integer edad) {
+    public Cliente(String nombre, String apellido, String mail) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.mail = mail;
-        this.edad = edad;
         this.productos = new ArrayList<Producto>();
     }
 
@@ -76,8 +76,10 @@ public class Cliente {
                 '}';
     }
 
-    public void mostrarNombreCompleto() {
-        System.out.println(this.apellido +", "+this.nombre+".");
+    public String mostrarNombreCompleto() {
+        String nombreCompleto = this.apellido +", "+this.nombre+".";
+        System.out.println(nombreCompleto);
+        return nombreCompleto;
     }
 
     public void nombreYPrecioProductos() {
@@ -86,13 +88,25 @@ public class Cliente {
         }
     }
 
-    public void ingresarProducto(String codigo) throws ExeptionInvalidProduct, ExeptionMaximunSize {
-        if (productos.size()>=4) {
-            Producto producto = (Producto)ProductoFactory.getInstance().crearProducto(codigo);
-            productos.add(producto);
-        } else {
-            throw new ExeptionMaximunSize();
-        }
+    public void ingresarProducto() throws ExeptionInvalidProduct, ExeptionMaximunSize {
+        Scanner scanner = new Scanner(System.in);
+        String respuesta;
+        do {
+            if (productos.size()<4) {
+                System.out.print("Ingrese el codigo del producto ");
+                String codigo = scanner.nextLine();
+                Producto producto = (Producto)ProductoFactory.getInstance().crearProducto(codigo);
+                productos.add(producto);
+            } else {
+                throw new ExeptionMaximunSize();
+            }
+            System.out.print("¿Desea agregar otro producto?");
+            respuesta = scanner.nextLine();
+        } while (respuesta.equalsIgnoreCase("si"));
+    }
+
+    public Boolean esMayor() {
+        return this.edad>18;
     }
 
 }

@@ -19,13 +19,13 @@ public class ProductoFactory {
 
     public Producto crearProducto(String codigo) throws ExeptionInvalidProduct {
         Producto newProducto = null;
-        /*if (Objects.equals(codigo, "01")) {
+        if (Objects.equals(codigo, "01")) {
             newProducto = new ProductoComestible();
         } else if (Objects.equals(codigo, "02")) {
             newProducto = new ProductoCosmetico();
         } else {
             throw new ExeptionInvalidProduct();
         }
-        return newProducto;*/
+        return newProducto;
     }
 }
